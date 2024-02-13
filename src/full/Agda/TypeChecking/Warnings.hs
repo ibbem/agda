@@ -170,6 +170,7 @@ isMetaTCWarning = isMetaWarning . tcWarning
 -- | Should we only emit a single warning with this constructor.
 onlyOnce :: Warning -> Bool
 onlyOnce InversionDepthReached{} = True
+onlyOnce DuplicateInterfaceFiles{} = True
 onlyOnce _ = False
 
 onlyShowIfUnsolved :: Warning -> Bool
